@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alan ve Çevre Hesaplama</title>
+  </head>
+  <body>
+    <div class="container">
+        <form name="calculateForm" onsubmit="handleCalculate(event)">
+            <label for="priceText">Birim Fiyatı: </label>
+            <input type="number" name="price" id="price"><br><br>
+            <label for="numberText">Adet: </label>
+            <input type="number" name="number" id="number"><br><br>
+            <input type="submit" value="Hesapla"><br><br>
+            <label for="totalPriceText">Toplam Tutar: </label>
+            <input type="text" id="totalPrice" readonly>
+        </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

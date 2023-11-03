@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alan ve Çevre Hesaplama</title>
+  </head>
+  <body>
+    <div class="container">
+      <form name="calculateForm" onsubmit="handleCalculate(event)">
+        <label for="textA">a: </label>
+        <input type="number" name="valueA" id="valueA"><br><br>
+        <label for="textB">b: </label>
+        <input type="number" name="valueB" id="valueB"><br><br>
+        <label for="textC">c: </label>
+        <input type="number" name="valueC" id="valueC"><br><br>
+        <input type="submit" value="Hesapla"><br><br>
+        <label for="resultText">2b - 4ac = </label>
+        <input type="number" id="result" readonly>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
