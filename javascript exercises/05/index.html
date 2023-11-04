@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head></head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Changer Test</title>
+</head>
 
 <body>
-    <label for="headerText">Welcome to letter changer</label><br><br>
-    <label for="text">Please enter the text you want to change.</label><br><br>
+    <h1>Letter Changer Test</h1>
+
+    <label for="userTextInput">Text to Change:</label>
     <textarea name="userTextInput" id="userTextInput" rows="4" cols="50"></textarea><br><br>
-    <label for="changeCharacterText">Please enter the letter you want to change: </label>
+
+    <label for="userChangeCharacter">Letter to Change:</label>
     <input type="text" name="userChangeCharacter" id="userChangeCharacter"><br><br>
-    <label for="addCharacterText">Please enter the letter you want to add</label>
+
+    <label for="userAddCharacter">Letter to Add:</label>
     <input type="text" name="userAddCharacter" id="userAddCharacter"><br><br>
-    <label for="checkboxTextVowel">I want to change vowel letters</label>
+
+    <label for="checkboxTextVowel">Change Vowel Letters</label>
     <input type="checkbox" name="checkboxVowel" id="checkboxVowel"><br><br>
-    <label for="checkboxTextConsonant">I want to change consonant letters</label>
+
+    <label for="checkboxTextConsonant">Change Consonant Letters</label>
     <input type="checkbox" name="checkboxConsonant" id="checkboxConsonant"><br><br>
+
     <button id="submitButton">Send</button><br><br>
-    <label for="resultText" id="resultText"></label>
+
+    <label for="resultText">Result:</label>
+    <p id="resultText"></p>
+
     <script src="script.js"></script>
 </body>
 

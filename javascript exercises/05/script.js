@@ -33,11 +33,16 @@ document.getElementById("submitButton").addEventListener("click", function (even
                     }
                 }
             } else if (isConsonantChecked) {
-                //We are here because the consonant checkbox is checked.
+                // If consonant checkbox is selected, change only consonant letters
                 for (let i = 0; i < inputArray.length; i++) {
+                    let isConsonant = true;
                     for (let j = 0; j < vowelLetters.length; j++) {
-                        if (inputArray[i] != vowelLetters[j]) inputArray[i] = userAddCharacter;
+                        if (inputArray[i] == vowelLetters[j]) {
+                            isConsonant = false;
+                            break;
+                        }
                     }
+                    if (isConsonant) inputArray[i] = userAddCharacter;
                 }
             } else {
                 //we are here because the user entered another letter for change
