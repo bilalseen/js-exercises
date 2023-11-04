@@ -1,15 +1,23 @@
-let checkboxVowel = document.getElementById("checkboxVowel");
-let checkboxConsonant = document.getElementById("checkboxConsonant");
+let radioVowel = document.getElementById("radioVowel");
+let radioConsonant = document.getElementById("radioConsonant");
 let isVowelChecked = false;
 let isConsonantChecked = false;
-//Vowel checkbox control
-checkboxVowel.addEventListener("change", function () {
-    if (checkboxVowel.checked) isVowelChecked = true;
-})
-//Consonant checkbox control
-checkboxConsonant.addEventListener("change", function () {
-    if (checkboxConsonant.checked) isConsonantChecked = true;
-})
+
+// Vowel radio button control
+radioVowel.addEventListener("change", function () {
+    if (radioVowel.checked) {
+        isVowelChecked = true;
+        isConsonantChecked = false;
+    }
+});
+
+// Consonant radio button control
+radioConsonant.addEventListener("change", function () {
+    if (radioConsonant.checked) {
+        isConsonantChecked = true;
+        isVowelChecked = false;
+    }
+});
 
 document.getElementById("submitButton").addEventListener("click", function (event) {
     event.preventDefault();
@@ -20,47 +28,47 @@ document.getElementById("submitButton").addEventListener("click", function (even
         let userChangeCharacter = document.getElementById("userChangeCharacter").value;
         let userAddCharacter = document.getElementById("userAddCharacter").value;
 
-        //user input and user add character control
+        // user input and user add character control
         if (isNaN(userInput) && isNaN(userAddCharacter)) {
             let inputArray = userInput.split("");
-            //create vowel letters array
-            var vowelLetters = ['a', 'A', 'e', 'E', 'I', 'ı', 'İ', 'i', 'O', 'o', 'ö', 'Ö', 'u', 'U', 'ü', 'Ü'];
+
             if (isVowelChecked) {
-                //We are here because the vowel checkbox is checked.
+                // We are here because the vowel radio button is checked.
+                // Change only vowel letters
                 for (let i = 0; i < inputArray.length; i++) {
-                    for (let j = 0; j < vowelLetters.length; j++) {
-                        if (inputArray[i] == vowelLetters[j]) inputArray[i] = userAddCharacter;
+                    if (isVowel(inputArray[i])) {
+                        inputArray[i] = userAddCharacter;
                     }
                 }
             } else if (isConsonantChecked) {
-                // If consonant checkbox is selected, change only consonant letters
+                // If consonant radio button is selected, change only consonant letters
                 for (let i = 0; i < inputArray.length; i++) {
-                    let isConsonant = true;
-                    for (let j = 0; j < vowelLetters.length; j++) {
-                        if (inputArray[i] == vowelLetters[j]) {
-                            isConsonant = false;
-                            break;
-                        }
+                    if (!isVowel(inputArray[i])) {
+                        inputArray[i] = userAddCharacter;
                     }
-                    if (isConsonant) inputArray[i] = userAddCharacter;
                 }
             } else {
-                //we are here because the user entered another letter for change
+                // We are here because the user entered another letter for change
                 if (isNaN(userChangeCharacter)) {
                     for (let i = 0; i < inputArray.length; i++) {
-                        if (inputArray[i] == userChangeCharacter) inputArray[i] = userAddCharacter;
+                        if (inputArray[i] === userChangeCharacter) {
+                            inputArray[i] = userAddCharacter;
+                        }
                     }
-                } else alert("Please enter the correct input");
-
+                } else {
+                    alert("Please enter the correct input");
+                }
             }
 
-
             let resultText = inputArray.join("");
-
             document.getElementById("resultText").innerHTML = resultText;
-
-        } else alert("Please enter the correct input");
-
-
+        } else {
+            alert("Please enter the correct input");
+        }
     }
-})
+
+    function isVowel(char) {
+        var vowelLetters = ['a', 'A', 'e', 'E', 'I', 'ı', 'İ', 'i', 'O', 'o', 'ö', 'Ö', 'u', 'U', 'ü', 'Ü'];
+        return vowelLetters.includes(char);
+    }
+});
