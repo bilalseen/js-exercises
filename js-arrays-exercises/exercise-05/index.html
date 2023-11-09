@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="getArrayForm">
+            <div class="user-input-group">
+                <label class="header-text" for="userInput">Enter your array:</label><br>
+                <input type="text" name="userInput" id="userInput" placeholder="(Example: 1,2,3,4,5)"><br>
+                <button class="button" id="submitButton">Send</button><br>
+                <output class="output" id="userArrayOutput">a</output>
+            </div>
+        </form>
+
+        <div class="output-group">
+            <div class="output-div">
+                <label class="header-text">Even Numbers</label><br>
+                <button class="button" id="getEvenNumbersButton">Get</button><br>
+                <output class="output" id="evenNumbersOutput">a</output>
+            </div>
+
+            <div class="output-div">
+                <label class="header-text">Odd Numbers</label><br>
+                <button class="button" id="getOddNumbersButton">Get</button><br>
+                <output class="output" id="oddNumbersOutput">a</output>
+            </div>
+
+            <div class="output-div">
+                <label class="header-text">Prime Numbers</label><br>
+                <button class="button" id="getPrimeNumbersButton">Get</button><br>
+                <output class="output" id="primeNumbersOutput">a</output>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
