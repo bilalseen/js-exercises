@@ -8,16 +8,14 @@ document
     if (userInput == "") {
       alert("Please enter your array");
     } else {
-      console.log(userInput);
       let userInputArr = userInput.split(",");
-      console.log(userInputArr);
+
       userInputArr = userInputArr.filter(function (element) {
         return element != 0;
       });
       userInputArr = userInputArr.map(function (numbers) {
         return parseInt(numbers);
       });
-      console.log(userInputArr);
 
       document.getElementById("userArrayOutput").innerHTML =
         userInputArr.join(", ");
@@ -26,7 +24,7 @@ document
         .getElementById("getPrimeNumbersButton")
         .addEventListener("click", function () {
           let primes = findPrimes(userInputArr);
-          console.log(primes.length);
+
           if (primes.length > 0) {
             document.getElementById("primeNumbersOutput").innerHTML =
               primes.join(", ");
