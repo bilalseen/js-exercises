@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.post-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.post {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.post-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Renk değişikliği yapabilirsiniz */
+}
+
+.post-userId {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #555; /* Renk değişikliği yapabilirsiniz */
+}
+
+#nextPageButton {
+    align-items: center;
+}
