@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@700&family=Shantell+Sans:ital,wght@1,500&display=swap");
+
+* {
+  font-family: "Merriweather", serif;
+}
+
+.container {
+  text-align: center;
+  background-color: antiquewhite;
+  height: auto;
+  display: grid;
+}
+
+.header-container {
+  padding: 30px;
+}
+
+.input-container {
+  background-color: #ddd;
+  padding: 20px;
+  border: 2px solid #ddd;
+  box-shadow: 0 0 15px black;
+  border-radius: 10px;
+  display: grid;
+}
+
+.url-container,
+.name-container {
+  display: grid;
+  justify-content: center;
+  margin-block: 15px;
+}
+
+.url-input,
+.name-input {
+  width: 400px;
+  height: 25px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-block: 10px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.submit-button {
+  border: 1px;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  background-color: gray;
+  color: white;
+  transition: 0.5s;
+}
+
+.submit-button:hover {
+  background-color: green;
+  box-shadow: 0 0 15px green;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-block: 100px;
+  margin-block-end: 200px;
+}
+
+.image {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px gray;
+  transition: 0.5s;
+}
+
+.image:hover {
+  width: 450px;
+  height: 250px;
+  box-shadow: 0 0 25px black;
+}
