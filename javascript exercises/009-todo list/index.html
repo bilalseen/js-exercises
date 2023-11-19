@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="todo-container">
+      <div class="header">
+        <span class="header-text">Todo List</span>
+      </div>
+      <div class="main-content">
+        <div class="input-section">
+          <div class="input-todo">
+            <span class="input-label">Enter Todo</span>
+            <input type="text" class="user-input" />
+          </div>
+          <div class="priority-options">
+            <div class="priority-option low-priority">
+              <input
+                type="radio"
+                class="low-priority-choice-button"
+                name="priority"
+              />
+              <span class="priority-choice-button-text">Low Priority</span>
+            </div>
+            <div class="priority-option medium-priority">
+              <input
+                type="radio"
+                class="medium-priority-choice-button"
+                name="priority"
+              />
+              <span class="priority-choice-button-text">Medium Priority</span>
+            </div>
+            <div class="priority-option high-priority">
+              <input
+                type="radio"
+                class="high-priority-choice-button"
+                name="priority"
+              />
+              <span class="priority-choice-button-text">High Priority</span>
+            </div>
+          </div>
+          <div class="button-container">
+            <button class="submit-button">Add Todo</button>
+          </div>
+        </div>
+      </div>
+      <div class="filter-todo">
+        <button class="filter-low-priority-todo">Low Todos</button>
+        <button class="filter-medium-priority-todo">Medium Todo</button>
+        <button class="filter-high-priority-todo">High Todo</button>
+
+      </div>
+      <div class="todo-list">
+        
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

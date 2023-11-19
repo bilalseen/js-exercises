@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Merriweather&family=Shantell+Sans:ital,wght@1,500&display=swap");
+* {
+  font-family: "Lora", serif;
+}
+
+.todo-container {
+  margin: 0;
+}
+
+.header {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  padding-block: 40px;
+  font-size: 50px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.input-section {
+  text-align: center;
+  justify-content: center;
+}
+
+.input-todo {
+  display: grid;
+  margin: 20px;
+}
+
+.user-input {
+  margin-top: 20px;
+}
+
+.priority-options {
+  display: flex;
+}
+
+.priority-option {
+  display: grid;
+  margin: 40px;
+  transition: 0.65s;
+}
+
+.high-priority:hover {
+  color: #f00;
+}
+
+.medium-priority:hover {
+  color: #b20000;
+}
+
+.low-priority:hover {
+  color: #008000;
+}
+
+.button-container {
+  margin: 20px;
+}
+
+.submit-button {
+  padding-inline: 20px;
+  padding-block: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  transition: 0.75s;
+}
+
+.submit-button:hover {
+  border: 2px solid green;
+  background-color: green;
+  box-shadow: 0 0 20px green;
+  color: white;
+}
+
+.todo-list {
+  display: grid;
+  justify-content: center;
+  margin-block-start: 50px;
+  margin-block-end: 100px;
+}
+
+.high-priority-todo,
+.medium-priority-todo,
+.low-priority-todo {
+  width: 700px;
+  text-align: center;
+  padding-block: 20px;
+  padding-inline: 40px;
+  margin-block: 20px;
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  transition: 0.5s;
+  box-shadow: 0 0 10px gray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.high-priority-todo {
+  border-color: #ff0000;
+}
+
+.high-priority-todo:hover {
+  box-shadow: 0 0 15px #ff0000;
+}
+
+.medium-priority-todo {
+  border-color: #cc0000;
+}
+
+.medium-priority-todo:hover {
+  box-shadow: 0 0 15px #cc0000;
+}
+
+.low-priority-todo {
+  border-color: #4c0000;
+}
+
+.low-priority-todo:hover {
+  box-shadow: 0 0 15px #4c0000;
+}
+
+.todo-text {
+  margin-inline-end: 40px;
+}
+
+.delete-button {
+  color: black;
+  background-color: gray;
+  text-align: right;
+  border-radius: 10px;
+  border: 1px solid gray;
+  max-height: 40px;
+  padding-inline: 20px;
+  padding-block: 10px;
+  transition: 0.5s;
+}
+
+.delete-button:hover {
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+}
