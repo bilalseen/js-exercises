@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Merriweather&family=Shantell+Sans:ital,wght@1,500&display=swap");
+
 * {
   font-family: "Lora", serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .todo-container {
@@ -11,7 +15,7 @@
   background-color: orange;
   color: white;
   text-align: center;
-  padding-block: 40px;
+  padding: 40px;
   font-size: 50px;
 }
 
@@ -63,8 +67,7 @@
 }
 
 .submit-button {
-  padding-inline: 20px;
-  padding-block: 10px;
+  padding: 10px 20px;
   border: 2px solid #ddd;
   border-radius: 10px;
   transition: 0.75s;
@@ -80,8 +83,7 @@
 .todo-list {
   display: grid;
   justify-content: center;
-  margin-block-start: 50px;
-  margin-block-end: 100px;
+  margin: 50px 0 100px;
 }
 
 .high-priority-todo,
@@ -89,12 +91,10 @@
 .low-priority-todo {
   width: 700px;
   text-align: center;
-  padding-block: 20px;
-  padding-inline: 40px;
-  margin-block: 20px;
+  padding: 20px 40px;
+  margin: 20px;
   border-radius: 15px;
-  border-width: 2px;
-  border-style: solid;
+  border: 2px solid transparent;
   transition: 0.5s;
   box-shadow: 0 0 10px gray;
   display: flex;
@@ -102,27 +102,27 @@
 }
 
 .high-priority-todo {
-  border-color: #ff0000;
+  border-color: #ff4500;
 }
 
 .high-priority-todo:hover {
-  box-shadow: 0 0 15px #ff0000;
+  box-shadow: 0 0 15px #ff4500;
 }
 
 .medium-priority-todo {
-  border-color: #cc0000;
+  border-color: #ff8c00;
 }
 
 .medium-priority-todo:hover {
-  box-shadow: 0 0 15px #cc0000;
+  box-shadow: 0 0 15px #ff8c00;
 }
 
 .low-priority-todo {
-  border-color: #4c0000;
+  border-color: #ffd700;
 }
 
 .low-priority-todo:hover {
-  box-shadow: 0 0 15px #4c0000;
+  box-shadow: 0 0 15px #ffd700;
 }
 
 .todo-text {
@@ -136,8 +136,7 @@
   border-radius: 10px;
   border: 1px solid gray;
   max-height: 40px;
-  padding-inline: 20px;
-  padding-block: 10px;
+  padding: 10px 20px;
   transition: 0.5s;
 }
 
