@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  border: 2px solid #ddd;
 }
 
 .input-section {
@@ -38,6 +38,15 @@
 
 .user-input {
   margin-top: 20px;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.user-input:hover {
+  box-shadow: 0 0 10px gray;
 }
 
 .priority-options {
@@ -105,6 +114,11 @@
   border-color: #ff4500;
 }
 
+.high-priority-todo-deactive {
+  border-color: #ff4500;
+  display: none;
+}
+
 .high-priority-todo:hover {
   box-shadow: 0 0 15px #ff4500;
 }
@@ -113,12 +127,22 @@
   border-color: #ff8c00;
 }
 
+.medium-priority-todo-deactive {
+  border-color: #ff8c00;
+  display: none;
+}
+
 .medium-priority-todo:hover {
   box-shadow: 0 0 15px #ff8c00;
 }
 
 .low-priority-todo {
   border-color: #ffd700;
+}
+
+.low-priority-todo-deactive {
+  border-color: #ffd700;
+  display: none;
 }
 
 .low-priority-todo:hover {
@@ -159,7 +183,9 @@
 
 .low-priority-todo-button,
 .medium-priority-todo-button,
-.high-priority-todo-button {
+.high-priority-todo-button,
+.all-priority-todo-button {
+  border: 1px solid #ddd;
   border-radius: 5px;
   transition: 0.5s;
 }
@@ -181,6 +207,13 @@
 .high-priority-todo-button:hover {
   border: 1px solid #ff4500;
   box-shadow: 0 0 15px #ff4500;
+  border-radius: 15px;
+  font-size: 15px;
+}
+
+.all-priority-todo-button:hover {
+  border: 1px solid #ff8d00;
+  box-shadow: 0 0 15px #ff8d00;
   border-radius: 15px;
   font-size: 15px;
 }

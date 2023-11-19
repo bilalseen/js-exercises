@@ -4,6 +4,8 @@ let lowPriorityTodos = [];
 let mediumPriorityTodos = [];
 let highPriorityTodos = [];
 
+let todoCounter = 0;
+
 document.querySelector(".submit-button").addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -21,6 +23,8 @@ document.querySelector(".submit-button").addEventListener("click", (e) => {
     todoDeleteButtonDOM.innerHTML = "Delete";
 
     let todoBoxDOM = document.createElement("div");
+    todoBoxDOM.id = todoCounter;
+    todoCounter++;
     let highPriorityButtonDOM = document.querySelector(
       ".high-priority-choice-button"
     );
@@ -50,6 +54,37 @@ document.querySelector(".submit-button").addEventListener("click", (e) => {
 
     // Delete button click event listener
     todoDeleteButtonDOM.addEventListener("click", () => {
+      const todoBoxId = todoBoxDOM.id;
+      if (todoBoxDOM.classList == "low-priority-todo") {
+        const indexToRemove = lowPriorityTodos.findIndex(
+          (element) => element.id == todoBoxId
+        );
+
+        if (indexToRemove !== -1) {
+          // Eğer index bulunmuşsa, diziden o index'teki öğeyi sil
+          lowPriorityTodos.splice(indexToRemove, 1);
+        }
+      } else if (todoBoxDOM.classList == "medium-priority-todo") {
+        const indexToRemove = mediumPriorityTodos.findIndex(
+          (element) => element.id == todoBoxId
+        );
+
+        if (indexToRemove !== -1) {
+          // Eğer index bulunmuşsa, diziden o index'teki öğeyi sil
+          mediumPriorityTodos.splice(indexToRemove, 1);
+        }
+      } else if (todoBoxDOM.classList == "high-priority-todo") {
+        const indexToRemove = highPriorityTodos.findIndex(
+          (element) => element.id == todoBoxId
+        );
+
+        if (indexToRemove !== -1) {
+          // Eğer index bulunmuşsa, diziden o index'teki öğeyi sil
+          highPriorityTodos.splice(indexToRemove, 1);
+        }
+      }
+
+      // todoListContainerDOM'dan todoBoxDOM'u kaldır
       todoListContainerDOM.removeChild(todoBoxDOM);
     });
 
@@ -63,6 +98,58 @@ document.querySelector(".submit-button").addEventListener("click", (e) => {
 
     todoListContainerDOM.appendChild(todoBoxDOM);
     userInput.value = "";
+
+    document
+      .querySelector(".low-priority-todo-button")
+      .addEventListener("click", () => {
+        clearTodoList();
+        lowPriorityTodos.forEach((item) => {
+          todoListContainerDOM.appendChild(item);
+        });
+      });
+
+    document
+      .querySelector(".medium-priority-todo-button")
+      .addEventListener("click", () => {
+        clearTodoList();
+        mediumPriorityTodos.forEach((item) => {
+          todoListContainerDOM.appendChild(item);
+        });
+      });
+
+    document
+      .querySelector(".high-priority-todo-button")
+      .addEventListener("click", () => {
+        clearTodoList();
+        highPriorityTodos.forEach((item) => {
+          todoListContainerDOM.appendChild(item);
+        });
+      });
+
+    document
+      .querySelector(".all-priority-todo-button")
+      .addEventListener("click", () => {
+        clearTodoList();
+        highPriorityTodos.forEach((item) => {
+          todoListContainerDOM.appendChild(item);
+        });
+        mediumPriorityTodos.forEach((item) => {
+          todoListContainerDOM.appendChild(item);
+        });
+        lowPriorityTodos.forEach((item) => {
+          todoListContainerDOM.appendChild(item);
+        });
+      });
+
+    function clearTodoList() {
+      const todoList = document.querySelector(".todo-list");
+
+      if (todoList) {
+        while (todoList.firstChild) {
+          todoList.removeChild(todoList.firstChild);
+        }
+      }
+    }
   } else {
     alert("Please enter todo");
   }
