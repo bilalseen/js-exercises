@@ -145,3 +145,42 @@
   background-color: red;
   border: 1px solid red;
 }
+
+.todo-filter {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.filter-button {
+  padding-block: 10px;
+  padding-inline: 20px;
+}
+
+.low-priority-todo-button,
+.medium-priority-todo-button,
+.high-priority-todo-button {
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.low-priority-todo-button:hover {
+  border: 1px solid #ffd700;
+  box-shadow: 0 0 15px #ffd700;
+  border-radius: 15px;
+  font-size: 15px;
+}
+
+.medium-priority-todo-button:hover {
+  border: 1px solid #ff8c00;
+  box-shadow: 0 0 15px #ff8c00;
+  border-radius: 15px;
+  font-size: 15px;
+}
+
+.high-priority-todo-button:hover {
+  border: 1px solid #ff4500;
+  box-shadow: 0 0 15px #ff4500;
+  border-radius: 15px;
+  font-size: 15px;
+}
